@@ -6,13 +6,15 @@ settings:
 
 importers:
 
-  .: {}
-
-  part-1/chapter-1:
+  .:
     devDependencies:
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
+
+  part-1/chapter-1: {}
+
+  part-1/chapter-2/cacheStorage: {}
 
 packages:
 
