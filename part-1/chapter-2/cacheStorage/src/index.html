@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="panel">
-      <h1>斜体</h1>
+      <h1>斜体我来测试</h1>
       <img src="./cat.png" />
     </div>
   </body>
@@ -17,7 +17,13 @@
     if ('serviceWorker' in navigator) {
         console.log('load----')
         window.addEventListener('load', function() {
-            navigator.serviceWorker.register("./sw.js");
+            navigator.serviceWorker.register("./sw.js").then(function(registration) {
+              console.log('registration----',registration)
+              // do domething...
+            }).catch(function(err) {
+              console.log('err----',err)
+              // do domething...
+            });;
         })
     }
   </script>
