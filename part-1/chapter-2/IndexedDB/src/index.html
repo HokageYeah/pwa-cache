@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IndexedDB Demo</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <input id="value" type="text" placeholder="请输入待办事项" />
+      <button id="submit">添加</button>
+    </div>
+    <div id="list"></div>
+    <div>
+      <button onclick="filter('all')">显示所有</button>
+      <button onclick="filter('completed')">显示已完成</button>
+      <button onclick="filter('doing')">显示未完成</button>
+      <button onclick="removeAll()">清空</button>
+    </div>
+    <script src="./main.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        console.log("load");
+        document
+          .getElementById("submit")
+          .addEventListener("click", function () {
+            console.log("click");
+            const value = document.getElementById("value").value.trim();
+            if (value.length === 0) {
+              alert("待办事项不能为空111");
+            } else {
+              add(value);
+            }
+          });
+        filter("all");
+      });
+    </script>
+  </body>
+</html>
