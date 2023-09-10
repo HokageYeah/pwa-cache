@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,8 @@
     "copy-webpack-plugin": "^11.0.0",
     "extract-css-chunks-webpack-plugin": "^4.9.0",
     "html-webpack-plugin": "^5.5.3",
+    "mem-fs": "^3.0.0",
+    "mem-fs-editor": "^10.0.2",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }
